@@ -1,0 +1,30 @@
+
+.todo-item input {
+    border: none;
+    background-color: none;
+    font-size: 20px;
+    font-weight: medium;
+}
+
+.todo-item input:enabled {
+    border: 1px solid black;
+}
+
+.todo-item button {
+    border: none;
+    background-color: none;
+    cursor: pointer;
+}
+
+.todo-item {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.todo-input {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+}

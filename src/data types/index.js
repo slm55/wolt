@@ -1,96 +1,209 @@
-const streetEl = document.querySelector("#street-name");
+const storeData = [
+  {
+    id: 1,
+    name: "Salam Bro",
+    imageUrl:
+      "https://images.deliveryhero.io/image/stores-glovo/stores/565d9076196a96580be3ed764aa85ea3b5937e5276357bbc9dd030a41f8c285b?t=W3siYXV0byI6eyJxIjoibG93In19LHsicmVzaXplIjp7Im1vZGUiOiJmaWxsIiwid2lkdGgiOjQ1MCwiaGVpZ2h0IjoyNTB9fV0=",
+    rating: 94,
+    reviews: 500,
+    discount: -20,
+    isDeliveryFree: false
+  },
+  {
+    id: 2,
+    name: "Bahandi",
+    imageUrl:
+      "https://images.deliveryhero.io/image/stores-glovo/stores/1b83179e9b3d0e87b2bcd473e8b42f617f8607ef5f12e2a7a044d506e70aa076?t=W3siYXV0byI6eyJxIjoibG93In19LHsicmVzaXplIjp7Im1vZGUiOiJmaWxsIiwid2lkdGgiOjQ1MCwiaGVpZ2h0IjoyNTB9fV0=",
+    rating: 94,
+    reviews: 450,
+    isDeliveryFree: false
+  },
+  {
+    id: 3,
+    name: "I'm feel-good restaurants",
+    imageUrl:
+      "https://images.deliveryhero.io/image/stores-glovo/stores/13f9c3a9d078f55ec50eef46067dfc8c2fdc75a6b9ee3cf9cc385d8ee21a32ca?t=W3siYXV0byI6eyJxIjoibG93In19LHsicmVzaXplIjp7Im1vZGUiOiJmaWxsIiwid2lkdGgiOjQ1MCwiaGVpZ2h0IjoyNTB9fV0=",
+    rating: 94,
+    reviews: 500,
+    isDeliveryFree: true
+  },
+  {
+    id: 4,
+    name: "KFC",
+    imageUrl:
+      "https://images.deliveryhero.io/image/stores-glovo/stores/d4648d512c4a987f61349dc7f086328f332ef6a719b63bde68f83512ad923aef?t=W3siYXV0byI6eyJxIjoibG93In19LHsicmVzaXplIjp7Im1vZGUiOiJmaWxsIiwid2lkdGgiOjQ1MCwiaGVpZ2h0IjoyNTB9fV0=",
+    rating: 90,
+    reviews: 500,
+  },
+  {
+    id: 5,
+    name: "Salam Bro",
+    imageUrl:
+      "https://images.deliveryhero.io/image/stores-glovo/stores/267157c8141ecebc7316ae9b146c2e4c01d055bd7202fcc058630beda6972da5?t=W3siYXV0byI6eyJxIjoibG93In19LHsicmVzaXplIjp7Im1vZGUiOiJmaWxsIiwid2lkdGgiOjQ1MCwiaGVpZ2h0IjoyNTB9fV0=",
+    rating: 94,
+    reviews: 500,
+  },
+  {
+    id: 6,
+    name: "Gippo",
+    imageUrl:
+      "https://images.deliveryhero.io/image/stores-glovo/stores/ab06a44ae442c05ff2ed59e2b1b9bbe492c5499a826e8787a8535971eadac6b2?t=W3siYXV0byI6eyJxIjoibG93In19LHsicmVzaXplIjp7Im1vZGUiOiJmaWxsIiwid2lkdGgiOjQ1MCwiaGVpZ2h0IjoyNTB9fV0=",
+    rating: 92,
+    reviews: 500,
+    discount: -20
+  },
+  {
+    id: 7,
+    name: "Zheka's Doner",
+    imageUrl:
+      "https://images.deliveryhero.io/image/stores-glovo/stores/47eb6734c18126b6fa411a63c2701bb165d9dca4b08dfd5a13b9891a8baa766c?t=W3siYXV0byI6eyJxIjoibG93In19LHsicmVzaXplIjp7Im1vZGUiOiJmaWxsIiwid2lkdGgiOjQ1MCwiaGVpZ2h0IjoyNTB9fV0=",
+    rating: 88,
+    reviews: 500,
+  },
+  {
+    id: 8,
+    name: "Burger King",
+    imageUrl:
+      "https://images.deliveryhero.io/image/stores-glovo/stores/50b0efb192619699c322276512203f519d994877da764c1053f691a8ffd407a3?t=W3siYXV0byI6eyJxIjoibG93In19LHsicmVzaXplIjp7Im1vZGUiOiJmaWxsIiwid2lkdGgiOjQ1MCwiaGVpZ2h0IjoyNTB9fV0=",
+    rating: 93,
+    reviews: 500,
+    discount: -20
+  }
+];
+function createCard(restaurant) {
+  const cardDiv = document.createElement("div");
+  cardDiv.classList.add("section-two_card");
 
-// streetEl.classList.add("street_name");
-// streetEl.classList.add("streetname");
-// streetEl.classList.add("streeeeet");
-// streetEl.classList.remove("street_name");
+  const imgDiv = document.createElement("div");
+  imgDiv.classList.add("section-two_card_img");
+  imgDiv.style.backgroundImage = `url(${restaurant.imageUrl})`;
+  // img.src = restaurant.imageUrl
 
-streetEl.style.color = "#00A082FF";
-streetEl.style.backgroundColor = "white"; 
+  if(restaurant.hasOwnProperty('discount')) {
 
-// setTimeout(() => {
-//     streetEl.textContent = "Tole bi Street";
-// }, 5000);
+  }
 
-// setInterval(() => {
-//     streetEl.textContent = "Tole bi Street"
-// }, 3000);
+  if(restaurant.isDeliveryFree) {
+    // free 
+  }
 
-// setInterval(() => {
-//     streetEl.textContent = "Maulenov Street"
-// }, 6000);
+  const textsDiv = document.createElement("div");
+  textsDiv.classList.add("section-two_card_texts");
 
-// innerHTML -> string
-const menu = document.querySelector(".menu");
-// menu.innerHTML = `
-//       <h3>Menu</h3>
-//       <ul>
-//         <li>Burger</li>
-//         <li>Burger</li>
-//         <li>Burger</li>
-//         <li>Burger</li>
-//         <li>Burger</li>
-//       </ul>
-// `
+  const titleHeader = document.createElement("h1");
+  titleHeader.textContent = restaurant.name;
 
-// createElement -> object
-const menuHeading = document.createElement("h3");
-menuHeading.textContent = "Menu";
-menu.appendChild(menuHeading);
+  const ratingParagraph = document.createElement("p");
+  const strongElement = document.createElement("strong");
+  strongElement.textContent = restaurant.rating;
+  const spanElement = document.createElement("span");
+  spanElement.textContent = `(${restaurant.reviews})`;
+  spanElement.style.color = "gray";
 
-const menuList = document.createElement("ul");
-const foods = ["Chicken", "Burger", "Sushi"]
+  ratingParagraph.appendChild(strongElement);
+  ratingParagraph.appendChild(spanElement);
 
-for (let i = 0; i < foods.length; i++) {
-    const li = document.createElement("li");
-    li.textContent = foods[i];
-    menuList.appendChild(li);
+  textsDiv.appendChild(titleHeader);
+  textsDiv.appendChild(ratingParagraph);
+
+  cardDiv.appendChild(imgDiv);
+  cardDiv.appendChild(textsDiv);
+
+  cardDiv.addEventListener('click', () => {
+    window.location.href = `restaurantDetails.html?id=${restaurant.id}`;
+  })
+
+  return cardDiv;
 }
 
-menu.appendChild(menuList);
+const container = document.querySelector(".section-two_cards"); // container
 
-const lastSection = document.createElement("section");
-lastSection.classList.add("last-section");
-
-// const body = document.querySelector("body");
-document.body.appendChild(lastSection);
-
-
-const cafeList = [
-    {
-        name: "Salam Bro", 
-        img: "https//:",
-        rating: 93,
-        category: "Burgers",
-        reviews: 500,
-        isFreeDelivery: true
-    }, 
-    {
-
-    }
-]
-// const cafeContainer = docu querySel
-for (let cafe of cafeList) {
-    const cafe = createCafeCard(cafe);
-    cafeContainer.appendChild(cafe)
+for (const rest of storeData) {
+  const card = createCard(rest);
+  container.appendChild(card);
 }
 
-function createCafeCard(cafe) {
-    const card =  document.createElement("div")
-    
-    return card;
+const data = [
+  {
+    oldPrice: 119900,
+    price: 49900,
+    brand: "Vivaldi",
+    category: "Пальто",
+  },
+  {
+    price: 160850,
+    brand: "Winterra",
+    category: "Куртка утепленная",
+  },
+  {
+    price: 54000,
+    brand: "Tom Tailor",
+    category: "Джинсы",
+  },
+  {
+    oldPrice: 32490,
+    price: 14250,
+    brand: "Finn Flare",
+    category: "Олимпийка",
+  },
+  {
+    oldPrice: 282200,
+    price: 141070,
+    brand: "Marc O'Polo",
+    category: "Пуховик",
+  },
+  {
+    price: 62900,
+    brand: "adidas",
+    category: "Костюм спортивный",
+  },
+  {
+    oldPrice: 14950,
+    price: 8950,
+    brand: "Colin's",
+    category: "Брюки",
+  },
+  {
+    oldPrice: 113990,
+    price: 34875,
+    brand: "Finn Flare",
+    category: "Пуховик",
+  },
+];
+
+const cards = document.querySelectorAll(".section-cards");
+
+for (const card of cards) {
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "scale(1.1)";
+    card.style.borderBottom = "1px solid black";
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "scale(1)";
+    card.style.borderBottom = "none";
+  });
 }
 
+const restCards = document.querySelectorAll(".section-two_card");
 
+for (const card of restCards) {
+  card.addEventListener("mouseenter", () => {
+    card.firstChild.style.transform = "scale(1.1)";
+  });
 
+  card.addEventListener("mouseleave", () => {
+    card.firstChild.style.transform = "scale(1)";
+  });
+}
 
+// container.firstElementChild.style.borderBottom = "1px solid black";
+// container.lastElementChild.style.borderBottom = "1px solid black";
+// container.children[1].style.borderBottom = "1px solid black";
 
+for (const card of container.children) {
+  card.style.borderBottom = "1px solid black";
+}
 
-
-
-
-
-
-
-
-
+container.removeChild(container.firstElementChild)
+container.removeChild(container.lastElementChild)

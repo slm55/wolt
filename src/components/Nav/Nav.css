@@ -1,0 +1,22 @@
+.main-nav-button {
+    padding: 8px 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 20px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.nav-btns-container {
+    display: flex;
+    gap: 10px;
+    width: 30%;
+    justify-content: center;
+}

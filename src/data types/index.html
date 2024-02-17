@@ -1,72 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Objects</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header>
-      <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Logotip_de_Glovo.png/1200px-Logotip_de_Glovo.png" />
-      <input type="search" placeholder="Search">
-      <button class="header-button main-button" id="header-button">Get started</button>
-    </header>
-    <section class="main">
-      <div class="location">
-        <p>Delivering to <b id="street-name">Maulenov Street</b></p>
-      </div>
-      <div class="categories">
-        <div class="category">
-          <div class="egg">
-            <img src="https://images.deliveryhero.io/image/customer-assets-glovo/category_icons/14a90fd277b0e025c6c351b2ad31fb9012c7077c12f2113536be60f11d6ef08d?t=W3siYXV0byI6eyJxIjoiaGlnaCJ9fSx7InJlc2l6ZSI6eyJtb2RlIjoiZml0Iiwid2lkdGgiOjEyMCwiaGVpZ2h0IjoxMjB9fV0=">
+  <html>
+    <head>
+      <title>Document Object Model</title>
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <div class="header div">
+      <header>
+          <div class="header-logo">
+            <img src="https://seeklogo.com/images/G/glovo-logo-AD78012757-seeklogo.com.png" alt="" class="header-img">
           </div>
-          <p>Food</p>
-        </div>
+          <form action="" class="header-form">
+            <button><ion-icon name="search-outline" class="button-icon"></ion-icon></button>
+            <input type="search" placeholder="Search" >
+          </form> 
+          <button id="header-button" class="header-button">Get started</button>
+      </header>
+      
+      <section class="section-one">
+        <p class="p">Delivering to <strong id="mau">Maulenov Street <ion-icon name="chevron-down-outline"></ion-icon></strong></p>
+        <div class="section-divs">
 
-        <div class="category">
-          <div class="egg">
-          <img src="https://images.deliveryhero.io/image/customer-assets-glovo/category_group_icons/cadec078a9bec44b786da73e8f7034ca4dc806e8cf58b885574b497fa468d635?t=W3siYXV0byI6eyJxIjoiaGlnaCJ9fSx7InJlc2l6ZSI6eyJtb2RlIjoiZml0Iiwid2lkdGgiOjEyMCwiaGVpZ2h0IjoxMjB9fV0=">
+          <div class="section-cards">
+            <div class="section-card">
+              <img src="img/14a90fd277b0e025c6c351b2ad31fb9012c7077c12f2113536be60f11d6ef08d.png" alt="" height="60px">
+            </div>
+            <p>Food</p>
           </div>
-          <p>Courier</p>
-        </div>
 
-        <div class="category">
-          <div class="egg">
-          <img src="https://images.deliveryhero.io/image/customer-assets-glovo/category_icons/6da238423ad3ff331b27beddedf65c2d055124abece110e60465cd7fc0f3ad80?t=W3siYXV0byI6eyJxIjoiaGlnaCJ9fSx7InJlc2l6ZSI6eyJtb2RlIjoiZml0Iiwid2lkdGgiOjEyMCwiaGVpZ2h0IjoxMjB9fV0=">
+          <div class="section-cards">
+            <div class="section-card">
+              <img src="img/cadec078a9bec44b786da73e8f7034ca4dc806e8cf58b885574b497fa468d635.png" alt="" height="60px">
+            </div>
+            <p>Courier</p>
           </div>
-          <p>Pharmacy</p>
-        </div>
 
-        <div class="category">
-          <div class="egg">
-            <img src="https://images.deliveryhero.io/image/customer-assets-glovo/category_icons/36cf8e6ffe1f91e575ae013a171ce035f31dc7f8f42a7ad22e51a50482c39255?t=W3siYXV0byI6eyJxIjoiaGlnaCJ9fSx7InJlc2l6ZSI6eyJtb2RlIjoiZml0Iiwid2lkdGgiOjEyMCwiaGVpZ2h0IjoxMjB9fV0=">
+          <div class="section-cards">
+            <div class="section-card">
+              <img src="img/6da238423ad3ff331b27beddedf65c2d055124abece110e60465cd7fc0f3ad80.png" alt="" height="60px">
+            </div>
+            <p>Pharmacy</p>
           </div>
-          <p>Groceries</p>
-        </div>
-
-        <div class="category">
-          <div class="egg">
-            <img src="https://images.deliveryhero.io/image/customer-assets-glovo/category_icons/c9335c5a0b8cd906e338ad2e6a07026239131b6ee2a2d1a74bd377afcd1de1d7?t=W3siYXV0byI6eyJxIjoiaGlnaCJ9fSx7InJlc2l6ZSI6eyJtb2RlIjoiZml0Iiwid2lkdGgiOjEyMCwiaGVpZ2h0IjoxMjB9fV0=">
+          
+          <div class="section-cards">
+            <div class="section-card">
+              <img src="img/0671f1e0cdda533e10c501022b1c7435ebd1714c3a8453046854e77fd9f93fc6.png" alt="" height="60px">
+            </div>
+            <p>Shops and gifts</p>
           </div>
-          <p>Glovo Express</p>
+
+          <div class="section-cards">
+            <div class="section-card">
+              <img src="img/36cf8e6ffe1f91e575ae013a171ce035f31dc7f8f42a7ad22e51a50482c39255.png" alt="" height="60px">
+            </div>
+            <p>Groceries</p>
+          </div>
+
+          <div class="section-cards">
+            <div class="section-card">
+              <img src="img/c9335c5a0b8cd906e338ad2e6a07026239131b6ee2a2d1a74bd377afcd1de1d7.png" alt="" height="60px">
+            </div>
+            <p>Glovo Express</p>
+          </div>
+
         </div>
-      </div>
-    </section>
-
-    <!-- <section id="food-cards">
-    </section> -->
-
-    <div class="menu">
-      <p>Our menu</p>
-      <p>Below is a list of available food</p>
+      </section>
     </div>
-
-    <!-- <section class="last-section">
-    </section> -->
-
-
-    
-    <script src="./index.js"></script>
-  </body>
-</html>
+    <section class="section-two">
+        <div class="section-two_images_texts">
+            <img src="img/newUserRecommendationsWidgetIconLight.png" alt="" height="30px">
+            <h1>Stores you might like</h1>
+        </div>
+        
+        <div class="section-two_cards">
+            <!-- Restaurant cards -->
+        </div>
+        
+    </section>
+        <!-- <section class="section-five">
+            <h2>Menu</h2>
+        </section> -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="index.js"></script>
+    </body>
+  </html>

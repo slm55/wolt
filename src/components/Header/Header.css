@@ -27,23 +27,45 @@ header {
     cursor: pointer;
   }
 
+  .location-left {
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgba(0, 157, 224, 0.08);
+    transition: background-color 30ms linear;
+  }
+
+  .location-hover {
+    background-color: rgba(0, 157, 224, 0.20);
+  }
+
   .location a {
     text-decoration: none;
     color: rgb(0, 157, 224);
   }
 
+  .header-center {
+    width: 30%;
+  }
+
   .search {
     display: flex;
-    align-items: center;
+    align-items: stretch;
+    justify-content: center;
     background-color: #2021251F;
     border-radius: 20px;
     padding: 10px;
+    width: 80%;
+  }
+
+  .search-active {
+    border-color: #009de0;
   }
 
   .search input {
     background-color: transparent;
     border: none;
     outline: none;
+    flex-grow: 2;
   }
 
   .header-right{

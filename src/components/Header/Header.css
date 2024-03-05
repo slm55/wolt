@@ -4,6 +4,11 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
     margin: 0;
+    background-color: white;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    left: 0;
   }
 
   #wolt-logo {

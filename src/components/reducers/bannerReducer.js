@@ -1,4 +1,4 @@
-import { FETCH_REQUEST, FETCH_SUCCESS, FETCH_FAILURE } from "../constants/actionTypes";
+import { FETCH_REQUEST, FETCH_SUCCESS, FETCH_FAILURE } from "../../constants/actionTypes";
 
 const url =
   "https://659c067fd565feee2dac49a8.mockapi.io/shoplane/api/v1/banners";

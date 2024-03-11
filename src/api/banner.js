@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FETCH_REQUEST, FETCH_SUCCESS, FETCH_FAILURE } from "../components/constants/actionTypes";
+import { FETCH_REQUEST, FETCH_SUCCESS, FETCH_FAILURE } from "../constants/actionTypes";
 
 const API_URL =
   "https://659c067fd565feee2dac49a8.mockapi.io/shoplane/api/v1/banners";

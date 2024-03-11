@@ -1,6 +1,3 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./DiscoverySlider.css";
 import { useState, useEffect, useReducer } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";

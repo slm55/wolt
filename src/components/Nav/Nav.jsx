@@ -1,14 +1,20 @@
 import { useState } from "react";
-import LocationCityOutlinedIcon from "@mui/icons-material/LocationCityOutlined";
-import RestaurantIcon from "@mui/icons-material/Restaurant";
-import StoreIcon from "@mui/icons-material/Store";
+import CableIcon from '@mui/icons-material/Cable';
+import DiamondIcon from '@mui/icons-material/Diamond';
+import ManIcon from '@mui/icons-material/Man';
+import GirlIcon from '@mui/icons-material/Girl';
 import NavButton from "./NavButton";
 import "./Nav.css";
+import { useNavigate } from "react-router-dom";
 function Nav() {
+  const navigate = useNavigate();
+
   const [buttons, setButtons] = useState( [
-    { title: "Discovery", icon: <LocationCityOutlinedIcon />, isActive: true },
-    { title: "Restaurants", icon: <RestaurantIcon />, isActive: false },
-    { title: "Stores", icon: <StoreIcon />, isActive: false },
+    { title: "All Products", icon: null, isActive: true, path: "" },
+    { title: "Electronics", icon: <CableIcon />, isActive: false, path: "electronics" },
+    { title: "Jewelery", icon: <DiamondIcon />, isActive: false, path: "jewelery"},
+    { title: "Men's Clothing", icon: <ManIcon /> , isActive: false, path: "men's clothing"},
+    { title: "Women's Clothing", icon: <GirlIcon />, isActive: false, path: "women's clothing"}
   ]);
 
   const onClick = (id) => {
@@ -17,6 +23,8 @@ function Nav() {
       return button;
     });
     setButtons(updatedButtons);
+    const path = buttons.find((button, index) => index == id).path;
+    navigate(`/products/${encodeURIComponent(path)}`);
   };
 
   return (

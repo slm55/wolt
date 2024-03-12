@@ -61,3 +61,8 @@
   height: 3.6em;
   line-height: 1.8em;
 }
+
+.product-details-wrapper {
+    width: 30%;
+    margin: 0 auto;
+}
